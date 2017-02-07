@@ -1,0 +1,16 @@
+.nav-bar {
+	background-color: #252525;
+    overflow: auto;
+    position: fixed;
+    width: 100%;
+    z-index : 1;
+    top: 0px;
+    left: 0px;
+}
+.nav-bar > ul > li {
+	display: inline-block;
+	list-style-type: none;
+	padding: 1rem;
+	font-family: 'BebasNeue';
+	font-size: #fff;
+}	

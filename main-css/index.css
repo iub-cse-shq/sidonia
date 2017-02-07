@@ -1,0 +1,19 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+@font-face {
+	font-family: 'BebasNeue';
+	src: url('bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot');
+	src: url('bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot?#iefix') 
+	format('embedded-opentype'),
+	url('bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff2')
+	format('woff2'),url('bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff')
+	format('woff'),url('bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.ttf')
+	format('truetype');}
+body {
+	background-color:#f8f8f8;
+}
+.carousel-example-generic {
+	width:100%;
+}
