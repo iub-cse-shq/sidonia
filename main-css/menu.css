@@ -1,3 +1,15 @@
+@font-face {
+	font-family: 'BebasNeue';
+	src: url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot');
+	src: url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot?#iefix')
+	format('embedded-opentype'),
+	url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff2')
+	format('woff2'),url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff')
+	format('woff'),url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.ttf')
+	format('truetype');
+	src: url('../bebas/MyFontsWebfontsKit/webfonts/BebasNeueLight.otf') format("opentype");
+	src: url('../bebas/MyFontsWebfontsKit/webfonts/BebasNeueBook.otf') format("opentype");
+}
 .nav-bar {
 	background-color: #252525;
     overflow: auto;
@@ -6,11 +18,54 @@
     z-index : 1;
     top: 0px;
     left: 0px;
+    float: right;
+
 }
 .nav-bar > ul > li {
 	display: inline-block;
 	list-style-type: none;
-	padding: 1rem;
+	padding: 2.2rem;
 	font-family: 'BebasNeue';
-	font-size: #fff;
-}	
+	position:relative;
+	font-size: 2rem;
+	font-weight: lighter;
+	float: left;
+}
+.nav-bar > ul > li > a {
+	text-decoration: none;
+	color:#fff;
+	line-height:1;
+	letter-spacing:1.4px;
+	border-top: 3px solid transparent;
+}
+.nav-bar > ul > li > a:hover {
+	border-top-color: #fff;
+	transition: 0.5s;
+}
+#pink:hover{
+ 	color: #e90675;
+ 	transition:0.5s;
+}
+#dyellow:hover {
+ 	color: #ffc000;
+ 	transition:0.5s;
+}
+#neon-green:hover {
+	color: #00fe12;
+	transition:0.5s;
+}
+#orange:hover {
+	color:#ff8400;
+	transition:0.5s;
+}
+#cyan:hover {
+	color:#00ffba;
+	transition:0.5s;
+}
+#logo {
+	display: inline-block;
+    padding: 2rem;
+    position:relative;
+    width: 150px;
+    float: left;
+}
