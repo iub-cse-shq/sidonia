@@ -6,83 +6,98 @@
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
         <title>Sidonia</title>
         <script src="scripts/jquery-3.1.1.min.js"></script>
-        <script src="scripts/bootstrap.min.js"></script>
+        <script src="bootstrap/bootstrap/js/bootstrap.min.js"></script>
         <script src="scripts/jquery-3.1.1.min.js"></script>
-        <link href="bootstrap-css/bootstrap.css" rel="stylesheet" />
-        <link href="bootstrap-css/bootstrap-theme.min.css" rel="stylesheet" />
-        <link href="main-css/index.css" rel="stylesheet" />
+        <link href="bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+        <link href="bootstrap/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+        <link href="main-css/main.css" rel="stylesheet" />
         <link href="main-css/menu.css" rel="stylesheet" />
         <link href="main-css/footer.css" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 
     </head>
     <body>
-        <header class = "nav-bar">
-            <ul>
-                <img src = "images/sidonia_logo.png" id = "logo" width:"150px" height: "43px" />
-                <li class = "active"><a href="index.html"><span id="pink"> Home </span></a>
-                <li><a href="#"><span id="orange">About</span> </a>
-                <li><a href="#"><span id="dyellow">Community</span> </a>
-                <li><a href="#"><span id="neon-green">Sign Up </span></a>
-                <li><a href="#"><span id ="cyan">Log In</span></a>
-            </ul>
-        </header>
-        <div>
-             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                 <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <div class="carousel-caption">
-                            <h3 class="intro">Welcome to Sidonia</h3>
-                            <p class="subintro">Meet new people, from different parts of the world!</p>
-                        </div>
-                        <img src="images/slide1.jpg">
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption">
-                            <h3 class="intro2">Talk about news</h3>
-                            <p class="subintro2">It's always great to stay up to date and hear what people think</p>
-                        </div>
-                        <img src="images/slide2.jpg">
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption">
-                            <h3 class="intro3">Talk about them 'nom noms</h3>
-                            <p class="subintro3">Where'd you get it and show it off!</p>
-                        </div>
-                         <img src="images/slide3.jpg">
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption">
-                            <h3 class="intro3">Talk about news</h3>
-                            <p class="subintro3">It's always great to stay up to date and hear what people think</p>
-                        </div>
-                         <img src="images/slide4.jpg">
-                    </div>
-                    <!-- Controls -->
-                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-             </div> 
+    	<div class="wrapper">
+    		<header class = "nav-bar">
+            	<ul>
+                	<img src = "images/sidonia_logo.png" id = "logo" width:"150px" height: "43px" />
+                	<li class = "active"><a href="index.html"><span id="pink"> Home </span></a>
+	                <li><a href="#"><span id="orange">About</span> </a>
+	                <li><a href="#"><span id="dyellow">Community</span> </a>
+	                <li><a href="signup.html"><span id="neon-green">Sign Up </span></a>
+	                <li><a href="#"><span id ="cyan">Log In</span></a>
+            	</ul>
+        	</header>
+	        <div>
+	             <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
+	                 <ol class="carousel-indicators">
+	                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	                    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+	                </ol>
+	                <div class="carousel-inner" role="listbox">
+	                    <div class="item active">
+	                        <div class="carousel-caption">
+	                            <h3 class="intro">Welcome to Sidonia</h3>
+	                            <p class="subintro">Meet new people, from different parts of the world!</p>
+	                        </div>
+	                        <img src="images/slide1.jpg">
+	                    </div>
+	                    <div class="item">
+	                        <div class="carousel-caption">
+	                            <h3 class="intro2">Talk about news</h3>
+	                            <p class="subintro2">It's always great to stay up to date and hear what people think</p>
+	                        </div>
+	                        <img src="images/slide2.jpg">
+	                    </div>
+	                    <div class="item">
+	                        <div class="carousel-caption">
+	                            <h3 class="intro3">Talk about them 'nom noms</h3>
+	                            <p class="subintro3">Where'd you get it and show it off!</p>
+	                        </div>
+	                         <img src="images/slide3.jpg">
+	                    </div>
+	                    <div class="item">
+	                        <div class="carousel-caption">
+	                            <h3 class="intro3">Talk about news</h3>
+	                            <p class="subintro3">It's always great to stay up to date and hear what people think</p>
+	                        </div>
+	                         <img src="images/slide4.jpg">
+	                    </div>
+	                    <!-- Controls -->
+	                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	                        <span class="sr-only">Previous</span>
+	                    </a>
+	                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	                        <span class="sr-only">Next</span>
+	                    </a>
+	                </div>
+	             </div> 
+	        </div>
+	        <footer class = "col-md-12">
+				<div class = "soc col-md-6">	
+					<span id = "contact">Contact</span>
+					<p> Bashundhara R/A </p>
+					<p> Dhaka </p>
+					<p> Bangladesh </p>
+					<br>
+					<p> +88017123456789 </p>
+					<p><a href="mailto:contact@sidonia.com" class="no-hijack">contact@sidonia.com</a></p>
+					<a href = "www.facebook.com/saminaxhossain" class="fa fa-facebook"></a>
+				</div>
+				<br>
+	    		<div class = "official">
+					<ul>
+						<li><a href="#">Legal Terms</a></li>
+						<li><a href="#">Cookies Policy</a></li>
+						<li><a href="#">Support</a></li>
+					</ul>
+				</div>
+	        </footer>
         </div>
-        <footer>
-        <div id = "social">Social Media</div>
-        <div id = "contact">Contact</div>
-        <div class = "official">
-            <ul>
-                <li><a href="#">Legal Terms</a></li>
-                <li><a href="#">Cookies Policy</a></li>
-                <li><a href="#">Support</a></li>
-        </footer>
     </body>
 </html>
