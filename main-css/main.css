@@ -1,0 +1,99 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+html {
+  min-height:100%;
+}
+.wrapper {
+  height: auto !important;
+  margin: 6rem auto -20rem;
+}
+@font-face {
+  font-family: 'BebasNeue';
+  src: url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot');
+  src: url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot?#iefix')
+  format('embedded-opentype'),
+  url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff2')
+  format('woff2'),url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff')
+  format('woff'),url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.ttf')
+  format('truetype');
+  src: url('../bebas/MyFontsWebfontsKit/webfonts/BebasNeueLight.otf') format("opentype");
+  src: url('../bebas/MyFontsWebfontsKit/webfonts/BebasNeueBook.otf') format("opentype");
+}
+body {
+	background-color:#f8f8f8;
+	background-repeat: no-repeat;
+	font-size: 14px;
+	transition-delay:0.5s;
+  background-attachment: fixed;
+}
+.carousel-caption 
+{
+	top: 50%;
+	transform: translateY(-50%);
+	bottom: initial;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    max-width: 100%;
+    max-height:100%;
+}
+.carousel-fade .carousel-inner .item {
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
+.signup-box {
+  font-family: 'BebasNeue';
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+  padding:20vw;
+}
+.c1, .c2 {
+  width: 50%;
+}
+label {
+  display:block;
+  text-align:left;
+  line-height: 1;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+  position: relative;
+}
+input {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom:10px;
+  display: block;
+}
+.btn-hover {
+  padding: 1rem 5rem 1rem 5rem;
+  background-color: #000;
+  color: #eee;
+  border: none;
+  letter-spacing: 2px;
+}
