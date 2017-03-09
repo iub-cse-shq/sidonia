@@ -3,31 +3,32 @@
 	padding: 0px;
 }
 html {
-  min-height:100%;
+	min-height:100%;
 }
 .wrapper {
-  height: auto !important;
-  margin: 6rem auto -20rem;
+	height: auto !important;
+	margin: 72px auto 0;
 }
 @font-face {
-  font-family: 'BebasNeue';
-  src: url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot');
-  src: url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot?#iefix')
-  format('embedded-opentype'),
-  url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff2')
-  format('woff2'),url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff')
-  format('woff'),url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.ttf')
-  format('truetype');
-  src: url('../bebas/MyFontsWebfontsKit/webfonts/BebasNeueLight.otf') format("opentype");
-  src: url('../bebas/MyFontsWebfontsKit/webfonts/BebasNeueBook.otf') format("opentype");
+	font-family: 'BebasNeue';
+	src: url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot');
+	src: url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot?#iefix')
+	format('embedded-opentype'),
+	url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff2')
+	format('woff2'),url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff')
+	format('woff'),url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.ttf')
+	format('truetype');
+	src: url('../bebas/MyFontsWebfontsKit/webfonts/BebasNeueLight.otf') format("opentype");
+	src: url('../bebas/MyFontsWebfontsKit/webfonts/BebasNeueBook.otf') format("opentype");
 }
 body {
 	background-color:#f8f8f8;
 	background-repeat: no-repeat;
 	font-size: 14px;
 	transition-delay:0.5s;
-  background-attachment: fixed;
+	background-attachment: fixed;
 }
+/*index.html*/
 .carousel-caption 
 {
 	top: 50%;
@@ -36,64 +37,146 @@ body {
 }
 .carousel-inner > .item > img,
 .carousel-inner > .item > a > img {
-    max-width: 100%;
-    max-height:100%;
+	max-width: 100%;
+	max-height:100%;
 }
 .carousel-fade .carousel-inner .item {
-  -webkit-transition-property: opacity;
-  transition-property: opacity;
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
 }
 .carousel-fade .carousel-inner .item,
 .carousel-fade .carousel-inner .active.left,
 .carousel-fade .carousel-inner .active.right {
-  opacity: 0;
+	opacity: 0;
 }
 .carousel-fade .carousel-inner .active,
 .carousel-fade .carousel-inner .next.left,
 .carousel-fade .carousel-inner .prev.right {
-  opacity: 1;
+	opacity: 1;
 }
 .carousel-fade .carousel-inner .next,
 .carousel-fade .carousel-inner .prev,
 .carousel-fade .carousel-inner .active.left,
 .carousel-fade .carousel-inner .active.right {
-  left: 0;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+	left: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
 }
 .carousel-fade .carousel-control {
-  z-index: 2;
+	z-index: 2;
 }
 
+/*sign up html*/
+
 .signup-box {
-  font-family: 'BebasNeue';
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  font-weight: lighter;
-  padding:20vw;
+	font-family: 'BebasNeue';
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	font-weight: lighter;
+	padding:2.6vw;
+	width: 100%;
+	height: 100%;
 }
-.c1, .c2 {
-  width: 50%;
+
+.signup-box > div {
+	padding: 3vw;
+	margin-left: 37vw;
 }
+
 label {
-  display:block;
-  text-align:left;
-  line-height: 1;
-  letter-spacing: 2px;
-  padding-bottom: 10px;
-  position: relative;
+	display:block;
+	text-align:left;
+	line-height: 1;
+	letter-spacing: 2px;
+	padding-bottom: 10px;
+	position: relative;
 }
 input {
-  position: relative;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-bottom:10px;
-  display: block;
+	position: relative;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-bottom:10px;
+	display: block;
 }
-.btn-hover {
-  padding: 1rem 5rem 1rem 5rem;
-  background-color: #000;
-  color: #eee;
-  border: none;
-  letter-spacing: 2px;
+
+/*create new topic html*/
+.dropbtn {
+    background-color: #222;
+    color: white;
+    padding-left:16px;
+    padding-right: 16px;
+    padding-top:9px;
+    padding-bottom:9px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    letter-spacing: 1px;
+ 
+}
+
+.dropbtn:hover, .dropbtn:focus {
+	
+    background-color: #333;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-bottom:30px;
+}
+.sub-btn {
+	margin-top: 3px;
+	background-color: #000;
+    color: white;
+    padding-left:16px;
+    padding-right: 16px;
+    padding-top:9px;
+    padding-bottom:9px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s;
+    letter-spacing: 1px;
+}
+.sub-btn:hover, .sub-btn:focus {
+    background-color: #333;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #eee ;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+/*main forum html*/
+
+.topic-box {
+	font-family: 'BebasNeue';
+	font-size: 2rem;
+	margin-bottom: 13rem;
+	font-weight: lighter;
+	padding:6vw;
+	width: 100%;
+	height: 100%;
+}
+
+.topic-box > div {
+
+	margin-left: 37vw;
 }
