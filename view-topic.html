@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+	<title>New Topic</title>
+	<script src="scripts/jquery-3.1.1.min.js"></script>
+	<script src="scripts/main.js"></script>
+	<link href="bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
+	<link href="bootstrap/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+	<link href="main-css/main.css" rel="stylesheet" />
+	<link href="main-css/menu.css" rel="stylesheet" />
+	<link href="main-css/footer.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+	</head>
+	<body>
+		<header class = "nav-bar">
+			<ul>
+				<img src = "images/sidonia_logo.png" id = "logo" width:"150px" height: "43px" />
+				<li><a href="index.html"><span id="pink"> Home </span></a>
+				<li><a href="#"><span id="orange">About</span> </a>
+				<li><a href="#"><span id="dyellow">Community</span> </a>
+				<li><a href="#"><span id="neon-green">Sign Up </span></a>
+				<li><a href="#"><span id ="cyan">Log In</span></a>
+			</ul>
+		</header>
+		<div class = "wrapper">
+			<div class= "topic-box">
+				<h1>Forum Name</h1>
+				<br>
+				<table class="table">
+					<tbody>
+						<tr>
+							<td>
+								<table class="table table-striped">
+									<tbody>
+										<tr>
+											<td><strong>topic</strong></td>
+										</tr>
+
+										<tr>
+											<td>detail</td>
+										</tr>
+
+										<tr>
+											<td><strong>By :</strong> username</td>
+										</tr>
+
+										<tr>
+											<td><strong>Date/time : </strong></td>
+										</tr>
+									</tbody>
+								</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<BR>
+				<table class="table">
+					<tr>
+						<td>
+							<table class="table table-striped">
+								<tr>
+									<td><strong>ID:</strong></td>
+
+									<td></td>
+								</tr>
+								<tr>
+									<td><strong>Userame:</strong></td>
+
+									<td></td>
+								</tr>
+								<tr>
+									<td><strong>Email:</strong></td>
+
+									<td></td>
+								</tr>
+								<tr>
+									<td><strong>Reply:</strong></td>
+
+									<td></td>
+								</tr>
+								<tr>
+									<td><strong>Date/Time:</strong></td>
+
+									<td></td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			<br>
+
+			<BR>
+			<table class = "table">
+				<tr>
+					<form name="formReply" action="add_reply.html">
+						<td>
+							<table>
+								<tr>
+									<td><strong><label for="reply">Reply</label></strong>
+									<textarea id="reply" name="reply" cols="45" rows="3" value=""></textarea></td>
+								</tr>
+								<tr>
+									<td><input type="submit" name="Submit" class = "sub-btn" value="Submit">
+									<input type="reset" name="Submit2" value="Reset" class = "sub-btn"></td>
+								</tr>
+							</table>
+
+						</td>
+					</form>
+				</tr>
+			</table>
+			</div>
+				<!-- get rows of view, reply, view topic topic, and date time -->
+		<footer class = "col-md-12">
+			<div class = "soc col-md-6">	
+				<span id = "contact">Contact</span>
+				<p> Bashundhara R/A </p>
+				<p> Dhaka </p>
+				<p> Bangladesh </p>
+				<br>
+				<p> +88017123456789 </p>
+				<p><a href="mailto:contact@sidonia.com" class="no-hijack">contact@sidonia.com</a></p>
+				<p><a href="http://www.facebook.com/saminaxhossain"  class = "fa fa-facebook"></a></p>
+			</div>
+			<br>
+			<div class = "official">
+				<ul>
+					<li><a href="#">Legal Terms</a></li>
+					<li><a href="#">Cookies Policy</a></li>
+					<li><a href="#">Support</a></li>
+				</ul>
+			</div>
+		</footer>
+		</div>
+	</body>
+</html>
