@@ -42,6 +42,8 @@
 	border-top-color: #fff;
 	transition: 0.5s;
 }
+
+
 #pink:hover{
  	color: #e90675;
  	transition:0.5s;
@@ -68,4 +70,7 @@
     position:relative;
     width: 150px;
     float: left;
+}
+a:active {
+	color: #eee;
 }

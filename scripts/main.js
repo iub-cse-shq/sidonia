@@ -10,6 +10,10 @@ function myFunction() {
     return false;
 }
 
+function menuF(x) {
+    x.classList.toggle("change");
+}
+
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
