@@ -21,23 +21,32 @@
 		<header class = "nav-bar">
 			<ul>
 				<img src = "images/sidonia_logo.png" id = "logo" width:"150px" height: "43px" />
-				<li><a href="index.html"><span id="pink"> Home </span></a>
-				<li><a href="about.html"><span id="orange">About</span> </a>
-				<li><a href="main-forum.html"><span id="dyellow">Forums</span> </a>
-				<li><a href="signup.html"><span id="neon-green">Sign Up </span></a>
-				<li><a href="login.html"><span id ="cyan">Log In</span></a>
+				<li><a href="index.ejs"><span id="pink"> Home </span></a>
+				<li><a href="about.ejs"><span id="orange">About</span> </a>
+				<li><a href="main-forum.ejs"><span id="dyellow">Forums</span> </a>
+				<li><a href="signup.ejs"><span id="neon-green">Sign Up </span></a>
+				<li><a href="login.ejs"><span id ="cyan">Log In</span></a>
 			</ul>
 		</header>
 		<div class = "wrapper">
-			<form id="forumForum" name="">
-				<div class=" forum-box" >
+			<form id="topicForum" name="">
+				<div class=" topic-box" >
 					<div>
-						<h1> Create New Forum </h1>
+						<h1> Create New Topic </h1>
 						<br>
-						<label for="topic">Forum Name</label>
-						<input type="text"  id="topic" placeholder="Ex. Cat Land">
-						<label for="detail:">Description</label>
-						<input type="Detail"  id="desc:" placeholder="Description">
+						<label for="topic">Topic</label>
+						<input type="text"  id="topic" placeholder="Ex. Ideas of Cat Names">
+						<label for="detail:">Detail</label>
+						<input type="Detail"  id="detail:" placeholder="detail">
+						<label for="detail:">Forum</label>
+						<div class="dropdown">
+							<button onclick="return myFunction();" class="dropbtn">Select</button>
+							<div id="myDropdown" class = "dropdown-content">
+								<a href="#item1" class="dropdownItem" id = "1">Forum 1</a>
+								<a href="#item2" class="dropdownItem" id = "2">Forum 2</a>
+								<a href="#item3" class="dropdownItem" id = "3">Forum 3</a>
+							</div>
+							<p id="displaySelectedText">Selected Forum</p>
 							<br>
 							<div class = "btn-group">
 								<button type="submit" name ="submit" class="sub-btn">Submit</button>
@@ -46,7 +55,6 @@
 						</div>
 					</div>
 				</div>
-
 			</form>
 		<footer class = "col-md-12">
 			<div class = "soc col-md-6">
