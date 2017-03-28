@@ -5,7 +5,7 @@
 var config = require('./config/config.js');
 var mongoose = require ('mongoose');
 var express = require ('express');
-
+var path = require('path');
 /**
  * Main application entry file.
  * Please note that the order of loading is important.
@@ -20,6 +20,9 @@ var db = mongoose.connect(uri,function(){
 // Init the express application
 var app = require('./express.js')(db);
 
+app.use('/public', express.static('public'));
+app.use('/fonts', express.static('public/fonts'));
+app.use('/images', express.static('public/images'));
 // Bootstrap passport config
 require('./passport')();
 

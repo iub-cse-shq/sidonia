@@ -1,0 +1,83 @@
+@font-face {
+	font-family: 'BebasNeue';
+	src: url('../fonts/bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot');
+	src: url('../fonts/bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot?#iefix')
+	format('embedded-opentype'),
+	url('../fonts/bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff2')
+	format('woff2'),url('../fonts/bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff')
+	format('woff'),url('../fonts/bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.ttf')
+	format('truetype');
+	src: url('../fonts/bebas/MyFontsWebfontsKit/webfonts/BebasNeueLight.otf') format("opentype");
+	src: url('../fonts/bebas/MyFontsWebfontsKit/webfonts/BebasNeueBook.otf') format("opentype");
+}
+footer {
+	background-color:#eeeeee;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    clear: both;
+}
+.soc {
+	text-align: center;
+	width: 100%;
+}
+#contact {
+	font-family: 'BebasNeue';
+ 	font-size: 4.3rem;
+ 	margin-bottom: 1rem;
+}
+.soc > p {
+	font-size: 1.3rem;
+	font-family: 'Lato', sans-serif;
+	margin: 0px;
+}
+.soc > p > a {
+	text-decoration: none;
+	color: #282828;
+	line-height: 1;
+	border-bottom: 3px solid transparent;
+}
+.soc > p > a:hover {
+	text-decoration: none;
+	border-bottom-color: #e0b818;
+	transition: .5s;
+}
+.soc > a {
+	text-decoration: none;
+	color: #282828;
+	line-height: 1;
+	border-bottom: 3px solid transparent;
+}
+.soc > a:hover
+footer > div > span {
+	display: inline-block;
+	margin: 2vh 10vw 5vh 10vw;
+
+}
+.official {
+	text-align: center;
+	width: 100%;
+}
+
+.official > ul > li {
+	list-style: none;
+	display: inline-block;
+	padding: 2.2rem;;
+	font-size: 1.3rem;
+	font-weight: 700;
+	font-family: 'Lato', sans-serif;
+
+}
+.official > ul > li > a {
+	text-decoration: none;
+	color: #282828;
+	line-height: 1;
+	border-bottom: 3px solid transparent;
+}
+.official > ul > li > a:hover {
+	text-decoration: none;
+	border-bottom-color: #e0b818;
+	transition: .5s;
+}

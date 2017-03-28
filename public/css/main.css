@@ -1,0 +1,416 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+html {
+	min-height:100%;
+}
+.wrapper {
+	height: auto !important;
+	margin: 72px auto 0;
+}
+@font-face {
+	font-family: 'BebasNeue';
+	src: url('../fonts/bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot');
+	src: url('../fonts/bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot?#iefix')
+	format('embedded-opentype'),
+	url('../fonts/bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff2')
+	format('woff2'),url('../fonts/bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff')
+	format('woff'),url('../fonts/bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.ttf')
+	format('truetype');
+	src: url('../fonts/bebas/MyFontsWebfontsKit/webfonts/BebasNeueLight.otf') format("opentype");
+	src: url('../fonts/bebas/MyFontsWebfontsKit/webfonts/BebasNeueBook.otf') format("opentype");
+}
+body {
+	background-color:#f8f8f8;
+	background-repeat: no-repeat;
+	font-size: 14px;
+	transition-delay:0.5s;
+	background-attachment: fixed;
+}
+/*index.html*/
+.carousel-caption 
+{
+	top: 50%;
+	transform: translateY(-50%);
+	bottom: initial;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+	max-width: 100%;
+	max-height:100%;
+}
+.carousel-fade .carousel-inner .item {
+	-webkit-transition-property: opacity;
+	transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+	opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+	opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+	left: 0;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+	z-index: 2;
+}
+
+/*sign up html*/
+
+.signup-box {
+	font-family: 'BebasNeue';
+	font-size: 2rem;
+	margin-bottom: 1rem;
+	font-weight: lighter;
+	padding:2.6vw;
+	width: 100%;
+	height: 100%;
+}
+
+.signup-box > div {
+	padding: 3vw;
+	margin-left: 37vw;
+}
+
+.login-box {
+	font-family: 'BebasNeue';
+	font-size: 2rem;
+	font-weight: lighter;
+	padding:6vw 6vw 12vw 6vw;
+	width: 100%;
+	height: 100%;
+}
+
+.login-box > div {
+
+	margin-left: 37vw;
+}
+label {
+	display:block;
+	text-align:left;
+	line-height: 1;
+	letter-spacing: 2px;
+	padding-bottom: 10px;
+	position: relative;
+}
+input {
+	position: relative;
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-bottom:10px;
+	display: block;
+}
+
+/*create new topic html*/
+.dropbtn {
+	background-color: #222;
+	color: white;
+	padding-left:16px;
+	padding-right: 16px;
+	padding-top:9px;
+	padding-bottom:9px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	transition: 0.5s;
+	letter-spacing: 1px;
+ 
+}
+
+.dropbtn:hover, .dropbtn:focus {
+	
+	background-color: #333;
+}
+
+.dropdown {
+	position: relative;
+	display: inline-block;
+	margin-bottom:30px;
+}
+.sub-btn {
+	margin-top: 3px;
+	background-color: #000;
+	color: white;
+	padding-left:16px;
+	padding-right: 16px;
+	padding-top:9px;
+	padding-bottom:9px;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	transition: 0.5s;
+	letter-spacing: 1px;
+}
+.sub-btn:hover, .sub-btn:focus {
+	background-color: #333;
+}
+
+.dropdown-content {
+	display: none;
+	position: relative;
+	background-color: #eee ;
+	min-width: 160px;
+	overflow: auto;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+}
+
+.dropdown a:hover {background-color: #f1f1f1}
+
+.show {display:block;}
+
+/*main forum html*/
+
+.topic-box {
+	font-family: 'BebasNeue';
+	font-size: 2rem;
+	font-weight: lighter;
+	padding:6vw 6vw 3vw 6vw;
+	width: 100%;
+	height: 100%;
+}
+
+.topic-box > div {
+
+	margin-left: 37vw;
+}
+
+.forum-box {
+	font-family: 'BebasNeue';
+	font-size: 2rem;
+	font-weight: lighter;
+	padding:6vw 6vw 10.5vw 6vw;
+	width: 100%;
+	height: 100%;
+}
+
+.forum-box > div {
+
+	margin-left: 37vw;
+}
+
+/*view topic */
+.messageHeading {
+	font-weight: bold;
+	font-size: 13px;
+	font-family: 'Lato', sans-serif;
+	color: rgb(124, 42, 0);
+	background-color: rgb(222, 222, 222);
+	padding: 8px 10px;
+	border-bottom: 3px solid rgb(124, 42, 0);
+	overflow: hidden;
+	position: relative;
+}
+
+.messageHeading .leftSide {
+    float: left;
+}
+
+.messageHeading .rightSide {
+    float: right;
+}
+.messageHeading {
+	margin-bottom: 10px;
+}
+
+.messageList .message:nth-child(odd) {
+}
+
+.messageList .message {
+    zoom: 1;
+}
+
+.messageList .message {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    border-top: 1px solid rgb(235, 235, 235);
+}
+.messageUserInfo {
+    float: left;
+    width: 155px;
+}
+.message .messageInfo, #QuickReply {
+    margin-left: 171px;
+}
+
+.message .messageInfo {
+    background: url(rgba.php?r=0&g=0&b=0&a=0);
+    background: rgba(0, 0, 0, 0);
+    _filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000,endColorstr=#00000000);
+    padding: 0 0 0 5px;
+    border-bottom: 1px none black;
+    zoom: 1;
+}
+
+.primaryContent {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.messageUserBlock {
+    position: relative;
+}
+.messageUserBlock {
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 0px;
+}
+
+.messageUserBlock div.avatarHolder {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 0px;
+    text-align: center;
+    position: relative;
+}
+
+.messageUserBlock div.avatarHolder .avatar {
+    display: block;
+    font-size: 0;
+}
+
+
+a:link, a:visited {
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+}
+.messageUserBlock h3.userText {
+    background-color: rgb(245, 245, 245);
+    padding: 6px;
+}
+.messageUserBlock a.username {
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+    overflow: hidden;
+}
+.message [dir="auto"] {
+    text-align: inherit;
+}
+
+.messageUserBlock .userTitle {
+    font-size: 13px;
+    padding-bottom: 5px;
+    display: block;
+}
+
+.messageUserBlock .extraUserInfo {
+    font-size: 13px;
+    background-color: rgb(255, 255, 255);
+    padding: 4px 6px;
+    border-radius: 0px;
+}
+
+.xbMainUserInfo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.messageUserBlock .extraUserInfo.xbBoxedFA .xbMessages, .messageUserBlock .extraUserInfo.xbBoxedFA .xbLikes, .messageUserBlock .extraUserInfo.xbBoxedFA .xbTrophyPoints {
+    margin: 2px;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 0px;
+    flex: 1 1 auto;
+}
+.messageUserBlock .extraUserInfo dl {
+    margin: 2px 0 0;
+}
+dl.pairsColumns, dl.pairsJustified, .pairsColumns dl, .pairsJustified dl {
+    overflow: hidden; 
+    zoom: 1;
+}
+.pairsRows, .pairsColumns, .pairsJustified {
+    line-height: 1.5;
+}
+.Responsive .messageUserBlock .extraUserInfo .fa {
+    color: rgb(70, 70, 70);
+    font-size: 15px;
+}
+.messageUserBlock .arrow {
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    display: block;
+    width: 0px;
+    height: 0px;
+    line-height: 0px;
+    border: 10px solid transparent;
+    border-left-color: rgb(235, 235, 235);
+    -moz-border-left-colors: rgb(235, 235, 235);
+    border-right: none;
+    display: none;
+}
+
+.pairsJustified dt {
+    float: left;
+    max-width: 100%;
+    margin-right: 5px;
+}
+
+.pairs dt, .pairsInline dt, .pairsRows dt, .pairsColumns dt, .pairsJustified dt {
+    color: rgb(113, 113, 113);
+}
+.pairsJustified dd {
+    float: right;
+    text-align: right;
+    max-width: 100%;
+}
+
+/* message box */
+
+.message .messageInfo, #QuickReply {
+    margin-left: 171px;
+}
+
+.message .messageInfo {
+    background: url(rgba.php?r=0&g=0&b=0&a=0);
+    background: rgba(0, 0, 0, 0);
+    _filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#00000000,endColorstr=#00000000);
+    padding: 0 0 0 5px;
+    border-bottom: 1px none black;
+    zoom: 1;
+}
+
+.primaryContent {
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    border-bottom: 1px solid rgb(235, 235, 235);
+}
+.message .messageContent {
+    padding-bottom: 2px;
+    min-height: 100px;
+    overflow: hidden;
+}
+
+.messageText {
+    font-size: 15px;
+    font-family: 'Verdana',Arial,sans-serif;
+    line-height: 1.6;
+}
+
+.message .messageMeta {
+    font-size: 13px;
+    padding: 15px 5px 5px;
+    margin: -5px;
+    overflow: hidden;
+    zoom: 1;
+}
