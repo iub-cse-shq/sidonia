@@ -4,26 +4,26 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-		<title>Sign Up</title>
-		<script src="scripts/jquery-3.1.1.min.js"></script>
-		<link href="bootstrap/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-	<link href="font-awesome/css/font-awesome.css" rel="stylesheet" />
-	<link href="bootstrap/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
-		<link href="main-css/main.css" rel="stylesheet" />
-		<link href="main-css/menu.css" rel="stylesheet" />
-		<link href="main-css/footer.css" rel="stylesheet" />
+		<title>Sidonia</title>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+		<link href="/public/css/main.css" rel="stylesheet" />
+		<link href="/public/css/menu.css" rel="stylesheet" />
+		<link href="/public/css/footer.css" rel="stylesheet" />
 		<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
 	</head>
 	<body>
 	<body>
 		<header class = "nav-bar">
 			<ul>
-				<img src = "images/sidonia_logo.png" id = "logo" width:"150px" height: "43px" />
-				<li ><a href="index.ejs"><span id="pink"> Home </span></a>
-				<li><a href="about.ejs"><span id="orange">About</span> </a>
-				<li><a href="main-forum.ejs"><span id="dyellow">Forum</span> </a>
-				<li><a href="signup.ejs"><span id="neon-green">Sign Up </span></a>
-				<li ><a href="login.ejs" ><span id ="cyan">Log In</span></a>
+				<img src ="images/sidonia_logo.png" id = "logo" width:"150px" height: "43px" />
+					<li ><a href="/index"><span id="pink"> Home </span></a>
+					<li><a href="/about"><span id="orange">About</span> </a>
+					<li><a href="/forum/forums"><span id="dyellow">Forum</span> </a>
+					<li><a href="/user/signup"><span id="neon-green">Sign Up </span></a>
+					<li><a href="/user/login"><span id ="cyan">Log In</span></a>
 			</ul>
 		</header>
 		<div class="wrapper">
@@ -82,7 +82,8 @@
 					window.location.replace('/');
 					}).fail(function(response){
 					console.log(response);
-					$("#error").text("Something went wrong! Try again.");
+					$("#error").text(JSON.parse(response.responseText).message);
+       				console.log(JSON.parse(response.responseText).message);
 				});
 			});
 	</script>

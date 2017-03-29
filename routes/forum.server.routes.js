@@ -4,7 +4,7 @@ module.exports = function(app){
  var users = require('./../controllers/users.server.controller.js');
 
  app.route('/api/forums')
-  .get(forums.listView);
+  .get(forums.view);
 
 
  app.route('/api/forums')
@@ -19,7 +19,7 @@ module.exports = function(app){
 	.get(forums.read)
 	.put(users.requiresLogin, forums.update);
 
-	 app.route('/api/forums')
+	 app.route('/forums/all')
   		.get(forums.listView);
 
 app.param('forumId', forums.forumByID);

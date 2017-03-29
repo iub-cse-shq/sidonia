@@ -18,6 +18,34 @@ module.exports.list = function(req, res) {
   });
 };
 
+exports.new = function(req, res) {
+	res.render('./../public/views/forum/create.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+exports.all = function(req, res) {
+	res.render('./../public/views/forum/list.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+exports.edit = function(req, res) {
+	res.render('./../public/views/forum/edit.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+exports.view = function(req, res) {
+	res.render('./../public/views/forum/forums.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
 module.exports.listView = function(req, res) {
   Forum.find(function(err, data) {
     if (err) {
@@ -81,7 +109,7 @@ module.exports.update = function(req, res) {
 };
 
 exports.forumByID = function(req, res, next, id) {
-	forum.findById(id).populate('user', 'email').exec(function(err, forum) {
+	Forum.findById(id).populate('user', 'email').exec(function(err, forum) {
 		if (err) return next(err);
 		if (!forum) return next(new Error('Failed to load forum ' + id));
 		req.forum = forum;

@@ -1,9 +1,8 @@
-<h1> Article List </h1>
-<% console.log(articles) %>
-  <% for(var i = 0; i < articles.length; i++) { %>
-      <h1> <%= articles[i].title %> </h1>
+<% console.log(forums) %>
+  <% for(var i = 0; i < forums.length; i++) { %>
+      <h1> <%= forums[i].title %> </h1>
       <p>
-        <%= articles[i].user%>
+        <%= forums[i].user%>
       </p>
-      <h3><%= articles[i].content%></h3>
+      <h3><%= forums[i].content%></h3>
   <% } %>

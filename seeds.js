@@ -5,7 +5,7 @@ var Forum = require('./models/Forum.js');
 var Topic = require('./models/Topic.js');
 var Reply = require ('./models/Reply.js');
 var User = require('./models/User.js');
-mongoose.connection.db.dropDatabase();
+//mongoose.connection.db.dropDatabase();
 
 var user = {
     email: 'abc@def.com',
