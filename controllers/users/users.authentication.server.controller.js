@@ -13,6 +13,10 @@ var _ = require('lodash'),
  * Signup
  */
 exports.signup = function(req, res) {
+	res.render('./../public/views/auth/signup.ejs', {
+    user: req.user || null,
+    request: req
+  });
 	// For security measurement we remove the roles from the req.body object
 	delete req.body.roles;
 

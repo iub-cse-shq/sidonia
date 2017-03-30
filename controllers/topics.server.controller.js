@@ -18,6 +18,13 @@ module.exports.list = function(req, res) {
   });
 };
 
+exports.new = function(req, res) {
+  res.render('./../public/views/topic/new.ejs', {
+//    user: req.user || null,
+  //  request: req
+  });
+};
+
 module.exports.topicListView = function(req, res) {
   Topic.find(function(err, data) {
     if (err) {
@@ -28,7 +35,7 @@ module.exports.topicListView = function(req, res) {
     } else {
       console.log("api called");
 
-      res.render('./../public/views/topic/list.ejs', {replies:data});
+      res.render('./../public/views/topic/topicList.ejs', {replies:data});
     }
   });
 };

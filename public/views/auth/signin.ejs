@@ -1,0 +1,44 @@
+<% include ../common/header.ejs %>
+
+		<div class="wrapper">
+			<div class = "login-box">
+				<div>
+					<form  class = "c1">
+						<h1> Login </h1>
+						<br>
+						
+						<label for="email">Email:</label>
+						<input type="text" id="email" name="email" value="">
+						<label for="password">Password</label>
+						<input type="password" id="password" name="password" value="">
+
+						<button class="sub-btn" type="submit" value="Save"><span>Log In</span></button>
+					</form>
+				</div> 
+			</div>
+
+	<script>
+		var user = {};
+			$("#email").change(function(event){
+				user.email=$("#email").val();
+			});
+			$("#password").change(function(event){
+				user.password=$("#password").val();
+			});
+			$("#submit").click(function(event){
+				$.ajax({
+					method: 'POST',
+					url: "/auth/signin",
+					data: user
+					}).done(function(response){
+					console.log(response);
+					window.location.replace('/');
+					}).fail(function(response){
+					console.log(response);
+					$("#error").text(JSON.parse(response.responseText).message);
+       				console.log(JSON.parse(response.responseText).message);
+				});
+			});
+	</script>
+	
+<% include ../common/header.ejs %>

@@ -3,11 +3,13 @@ module.exports = function(app){
  var topics = require('./../controllers/topics.server.controller.js');
  var users = require('./../controllers/users.server.controller.js');
 
- app.route('/api/topics')
+ app.route('/topics')
   .get(topics.topicListView);
 
+app.route('/topics/new')
+	.get(topics.new);
 
-	app.route('/api/topics')
+	app.route('/topics')
 		.get(topics.list)
 		.post(users.requiresLogin, topics.create);
 

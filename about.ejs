@@ -1,65 +1,16 @@
-<!DOCTYPE html>
-<html lang ="en">
-  <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
-    <title>Sidonia</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="/public/css/main.css" rel="stylesheet" />
-    <link href="/public/css/menu.css" rel="stylesheet" />
-    <link href="/public/css/footer.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+<% include public/views/common/header.ejs %>
 
-  </head>
-  <body>
-    <div class="wrapper">
-      <header class = "nav-bar">
-        <ul>
-          <img src ="images/sidonia_logo.png" id = "logo" width:"150px" height: "43px" />
-          <li ><a href="/index"><span id="pink"> Home </span></a>
-          <li><a href="/about"><span id="orange">About</span> </a>
-          <li><a href="/forum/forums"><span id="dyellow">Forum</span> </a>
-          <li><a href="/user/signup"><span id="neon-green">Sign Up </span></a>
-          <li><a href="/user/login"><span id ="cyan">Log In</span></a>
-        </ul>
-      </header>
-      <div>
-        <div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-          </ol>
-          <div class= "container"> 
-              Sidonia is a forum software providing a simple yet chic desgined template ranging from hobbyists to small businesses to form a community under a particular purpose they have.
-              <p>Sidonia's purpose is to bring people together, encouring people to remain anonymous without having to worry about being biased. </p> 
-              <p> It's a sophisticated platform that anyone would want to dive in! </p>
-          </div>
-      <footer class = "col-md-12">
-        <div class = "soc col-md-6">    
-          <span id = "contact">Contact</span>
-          <p> Bashundhara R/A </p>
-          <p> Dhaka </p>
-          <p> Bangladesh </p>
-          <br>
-          <p> +88017123456789 </p>
-          <p><a href="mailto:contact@sidonia.com" class="no-hijack">contact@sidonia.com</a></p>
-          <a href = "www.facebook.com/saminaxhossain" class="fa fa-facebook"></a>
-        </div>
-        <br>
-        <div class = "official">
-          <ul>
-            <li><a href="#">Legal Terms</a></li>
-            <li><a href="#">Cookies Policy</a></li>
-            <li><a href="#">Support</a></li>
-          </ul>
-        </div>
-      </footer>
-    </div>
-  </body>
-</html>
+<div>
+	<div id="carousel-example-generic" class="carousel slide carousel-fade" data-ride="carousel">
+		<ol class="carousel-indicators">
+			<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+		</ol>
+		<div class= "container"> 
+				Sidonia is a forum software providing a simple yet chic desgined template ranging from hobbyists to small businesses to form a community under a particular purpose they have.
+				<p>Sidonia's purpose is to bring people together, encouring people to remain anonymous without having to worry about being biased. </p> 
+				<p> It's a sophisticated platform that anyone would want to dive in! </p>
+		</div>
+	<% include public/views/common/footer.ejs %>
