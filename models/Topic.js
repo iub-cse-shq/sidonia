@@ -13,7 +13,7 @@ var TopicSchema = {
     type: String,
     default: '',
     trim: true,
-    required: 'Content required'
+    required: 'Description required'
 
   },
 
@@ -21,7 +21,7 @@ var TopicSchema = {
     type: String,
     default: '',
     trim: true,
-    required: 'Content required'
+    required: 'Forum required'
 
   },
   user: {

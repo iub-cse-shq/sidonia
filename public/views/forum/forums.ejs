@@ -37,12 +37,28 @@
 						<tr>
 							<td>
 								<h3>Name</h3>
+								<% for(var i = 0; i < forums.length; i++) { %>
+								<a href = "#"> <% forums[i].title %> </a>
+								<p> <% forums[i].description %> </p>
+								<% } %>
 							</td>
 							<td>
 								<h3>Topic</h3>
+								<% for(var i = 0; i < forums.length; i++) { %>
+								<%	var random = new Random(Random.engines.mt19937().autoSeed()); %>
+								<%	var value = random.integer(1, topics.length); %>
+								<%	value %>
+
+								<% } %>
 							</td>
 							<td>
 								<h3>Views</h3>
+								<% for(var i = 0; i < forums.length; i++) { %>
+								<%	var random = new Random(Random.engines.mt19937().autoSeed()); %>
+								<%	var value = random.integer(50, 1000); %>
+								<%	value %>
+
+								<% } %>
 							</td>
 							<td>
 								<h3>Replies</h3>
@@ -50,7 +66,7 @@
 						</tr>
 						<tr>
 							<td>
-								<a href="new-forum.html"><h3> Create new Forum </h3> </a> 
+								<a href="/forum/new"><h3> Create new Forum </h3> </a> 
 							</td>
 						</tr>
 					</tbody>

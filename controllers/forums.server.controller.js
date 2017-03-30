@@ -19,7 +19,7 @@ module.exports.list = function(req, res) {
 };
 
 exports.new = function(req, res) {
-	res.render('./../public/views/forum/create.ejs', {
+	res.render('./../public/views/forum/new.ejs', {
 		user: req.user || null,
 		request: req
 	});

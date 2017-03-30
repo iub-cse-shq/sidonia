@@ -6,6 +6,7 @@ var config = require('./config/config.js');
 var mongoose = require ('mongoose');
 var express = require ('express');
 var path = require('path');
+var Random = require("random-js");
 /**
  * Main application entry file.
  * Please note that the order of loading is important.
