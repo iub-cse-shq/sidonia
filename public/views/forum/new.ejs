@@ -1,22 +1,47 @@
 <% include ../common/header.ejs %>
-		<div class = "wrapper">
-			<form id="forumForum" name="">
-				<div class=" forum-box" >
-					<div>
-						<h1> Create New Forum </h1>
-						<br>
-						<label for="topic">Forum Name</label>
-						<input type="text"  id="topic" placeholder="Ex. Cat Land">
-						<label for="detail:">Description</label>
-						<input type="Detail"  id="desc:" placeholder="Description">
-							<br>
-							<div class = "btn-group">
-								<button type="submit" name ="submit" class="sub-btn">Submit</button>
-								<button type="reset" name = "reset" class="sub-btn">Reset</button>
-							</div>
-						</div>
+
+<div class="wrapper">
+	<form id="forumForum" name="" method="POST">
+		<div class=" forum-box" >
+			<div>
+				<h1> Create New Forum </h1>
+				<br>
+				<label for="title">Forum Name</label>
+				<input type="text"  id="title" placeholder="Ex. Cat Land">
+				<label for="description">Description</label>
+				<textarea id="description" placeholder="Description"></textarea>
+					<br>
+					<div class = "btn-group">
+						<button type="submit" id="submit" name="submit" class="sub-btn">Submit</button>
+						<button type="reset" id="reset" name="reset" class="sub-btn">Reset</button>
 					</div>
 				</div>
+			</div>
+		</div>
+	</form>
 
-			</form>
+	<script>
+		var forum = {};
+		$("#title").change(function(event){
+			forum.title = $("#title").val();
+		});
+		$("#description").change(function(event){
+			forum.description = $("#description").val();
+		});
+		$("#submit").click(function(event){
+			event.preventDefault();
+			$.ajax({
+				method: 'POST',
+				url: "/forums/create",
+				data: forum
+				}).done(function(response){
+					window.location.replace('/forums/'+response._id);
+				}).fail(function(response){
+					alert(response.responseText);
+					$("#error").text(JSON.parse(response.responseText).message);
+				//	alert(JSON.parse(response.responseText).message);
+			});
+		});
+	</script>
+
 <% include ../common/footer.ejs %>

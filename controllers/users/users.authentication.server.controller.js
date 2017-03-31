@@ -88,6 +88,7 @@ exports.profileView = function(req, res){
 		request: req
 	});
 };
+
 /**
  * Signout
  */

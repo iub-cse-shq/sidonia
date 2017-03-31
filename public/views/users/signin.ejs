@@ -19,25 +19,25 @@
 
 	<script>
 		var user = {};
-			$("#email").change(function(event){
-				user.email=$("#email").val();
+		$("#email").change(function(event){
+			user.email = $("#email").val();
+		});
+		$("#password").change(function(event){
+			user.password = $("#password").val();
+		});
+		$("#submit").click(function(event){
+			event.preventDefault();
+			$.ajax({
+				method: 'POST',
+				url: "/auth/signin",
+				data: user
+				}).done(function(response){
+					window.location.replace('/me');
+				}).fail(function(response){
+				$("#error").text(JSON.parse(response.responseText).message);
+				alert(JSON.parse(response.responseText).message);
 			});
-			$("#password").change(function(event){
-				user.password=$("#password").val();
-			});
-			$("#submit").click(function(event){
-				$.ajax({
-					method: 'POST',
-					url: "/auth/signin",
-					data: user
-					}).done(function(response){
-
-						window.location.replace('/me');
-					}).fail(function(response){
-					$("#error").text(JSON.parse(response.responseText).message);
-					alert(JSON.parse(response.responseText).message);
-				});
-			});
+		});
 	</script>
-	
+
 <% include ../common/header.ejs %>

@@ -13,7 +13,7 @@ var ForumSchema = {
     type: String,
     default: '',
     trim: true,
-    required: 'Content required'
+    required: 'Description required'
 
   },
   user: {

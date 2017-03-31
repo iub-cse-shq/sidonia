@@ -23,7 +23,27 @@
 					<li ><a href="/"><span id="pink"> Home </span></a>
 					<li><a href="/about"><span id="orange">About</span> </a>
 					<li><a href="/forums"><span id="dyellow">Forum</span> </a>
-					<li><a href="/signup"><span id="neon-green">Sign Up </span></a>
-					<li><a href="/signin"><span id ="cyan">Log In</span></a>
+					<% if (!request.user) { %> 
+						<li><a href="/signup"><span id="neon-green">Sign Up </span></a>
+						<li><a href="/signin"><span id ="cyan">Log In</span></a>
+					<% } %>
+					<% if (request.user) { %> 
+						<li><a href="/me"><span id ="cyan"> Hello, <%=request.user.username%> </span></a>
+						<li><a href="" id="signout"><span id ="cyan"> Sign Out </span></a>
+					<% } %>
 				</ul>
 			</header>
+			
+			<script>
+				$("#signout").click(function(event){
+					event.preventDefault();
+					$.ajax({
+						url: "/auth/signout",
+						data: null
+						}).done(function(response){
+							window.location.replace('/');
+						}).fail(function(response){
+						$("#error").text(JSON.parse(response.responseText).message);
+					});
+				});
+			</script>

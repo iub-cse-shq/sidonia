@@ -8,11 +8,11 @@
 			<tbody>
 				<tr>
 					<td>
-						<h3>Name</h3>
+						<h3>Forum Name</h3>
 						
 					</td>
 					<td>
-						<h3>Topic</h3>
+						<h3>Description</h3>
 						
 					</td>
 					<td>
@@ -23,6 +23,15 @@
 						<h3>Replies</h3>
 					</td>
 				</tr>
+  				<% for(var i = 0; i < forums.length; i++) { %>
+  				<tr>
+					<td> <a href="forum/<%= forums[i]._id %>"> <%= forums[i].title %>  </a> </td>
+					<td> <%= forums[i].description %> </td>
+					<td> <%= forums[i].user %> </td>
+					<td> </td>
+				</tr>
+				<% } %>
+
 				<tr>
 					<td>
 						<a href="/forums/new"><h3> Create new Forum </h3> </a> 
