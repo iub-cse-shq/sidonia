@@ -13,10 +13,7 @@ var _ = require('lodash'),
  * Signup
  */
 exports.signup = function(req, res) {
-	res.render('./../public/views/auth/signup.ejs', {
-    user: req.user || null,
-    request: req
-  });
+
 	// For security measurement we remove the roles from the req.body object
 	delete req.body.roles;
 
@@ -69,6 +66,20 @@ exports.signin = function(req, res, next) {
 			});
 		}
 	})(req, res, next);
+};
+
+exports.signinView = function(req, res){
+	res.render('./../public/views/users/signin.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+exports.signupView = function(req, res){/public/views/users/signup.ejs
+	res.render('./..', {
+		user: req.user || null,
+		request: req
+	});
 };
 
 /**
