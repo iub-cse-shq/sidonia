@@ -48,11 +48,11 @@
 			url: "/auth/signup",
 			data: user
 			}).done(function(response){
-			console.log(response);
-			window.location.replace('/');
+				window.location.replace('/me');
 			}).fail(function(response){
-			$("#error").text(JSON.parse(response.responseText).message);
-			console.log(JSON.parse(response.responseText).message);
+				
+				$("#error").text(JSON.parse(response.responseText).message);
+				alert(JSON.parse(response.responseText).message);
 			});
 		});
 	</script>

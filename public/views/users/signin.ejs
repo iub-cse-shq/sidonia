@@ -12,9 +12,9 @@
 						<label for="password">Password</label>
 						<input type="password" id="password" name="password" value="">
 
-						<button class="sub-btn" type="submit" value="Save"><span>Log In</span></button>
+						<button class="sub-btn" id="submit" type="submit" value="Save"><span>Log In</span></button>
 					</form>
-				</div> 
+				</div>
 			</div>
 
 	<script>
@@ -31,12 +31,11 @@
 					url: "/auth/signin",
 					data: user
 					}).done(function(response){
-					console.log(response);
-					window.location.replace('/');
+
+						window.location.replace('/me');
 					}).fail(function(response){
-					console.log(response);
 					$("#error").text(JSON.parse(response.responseText).message);
-       				console.log(JSON.parse(response.responseText).message);
+					alert(JSON.parse(response.responseText).message);
 				});
 			});
 	</script>

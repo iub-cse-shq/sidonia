@@ -75,13 +75,19 @@ exports.signinView = function(req, res){
 	});
 };
 
-exports.signupView = function(req, res){/public/views/users/signup.ejs
-	res.render('./..', {
+exports.signupView = function(req, res){
+	res.render('./../public/views/users/signup.ejs', {
 		user: req.user || null,
 		request: req
 	});
 };
 
+exports.profileView = function(req, res){
+	res.render('./../public/views/users/me.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
 /**
  * Signout
  */
