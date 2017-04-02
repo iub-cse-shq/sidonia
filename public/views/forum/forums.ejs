@@ -34,8 +34,11 @@
 
 				<tr>
 					<td>
+					<% if (request.user) { %> 
 						<a href="/forums/new"><h3> Create new Forum </h3> </a> 
+					<% } %>
 					</td>
+					
 				</tr>
 			</tbody>
 		</table>

@@ -15,3 +15,9 @@ exports.about = function(req, res) {
 		request: req
 	});
 };
+exports.pageNotFound = function(req, res) {
+	res.render('./../public/views/404.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};

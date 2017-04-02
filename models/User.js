@@ -76,6 +76,10 @@ var UserSchema = new Schema({
         default: '',
         trim: true
     },
+    description: {
+        type: String,
+        default: ''
+    },
     password: {
         type: String,
         default: '',
