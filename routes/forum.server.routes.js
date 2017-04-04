@@ -10,6 +10,10 @@ app.route('/forums/new')
 	.get(forums.new)
 	.post(users.requiresLogin, forums.create);
 
+app.route('/forums/viewtopic')
+	.get(forums.viewt)
+	.post(users.requiresLogin, forums.create);
+
 app.route('/forums/:forumId')
 	.get(forums.read)
 	.delete(users.requiresLogin, forums.delete);

@@ -66,6 +66,13 @@ body {
 	z-index: 2;
 }
 
+h3 {
+	font-size: 3.5rem;
+}
+
+p {
+	font-size: 1.9rem;
+}
 /*sign up html*/
 
 .signup-box {

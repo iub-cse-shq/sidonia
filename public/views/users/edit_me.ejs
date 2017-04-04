@@ -1,0 +1,76 @@
+<% include ../common/header.ejs %>
+	<link href="/public/css/styles.css" rel="stylesheet" />
+	<div id="w">
+		<div id="content" class="clearfix">
+			<div id="userphoto"><img src="images/avatar.png" alt="default avatar"></div>
+			<h1><%=request.user.firstName%></h1>
+
+			<nav id="profiletabs">
+				<ul class="clearfix">
+					<li><a href="#bio" class="sel">Bio</a></li>
+					<li><a href="#activity">Activity</a></li>
+					<li><a href="#friends">Friends</a></li>
+					<li><a href="#settings">Settings</a></li>
+				</ul>
+			</nav>
+			
+			<section id="bio">
+				<div class="form-horizontal">
+					<div class="form-group">
+						<label for="firstName" class="col-sm-2 control-label">First Name</label>
+						<div class="col-sm-10">
+						  <input type="text" class="form-control" id="firstName" placeholder="Jon" value=<%=request.user.firstName%>>
+						  <label for="lastName" class="col-sm-2 control-label">Last Name</label>
+						<div class="col-sm-10">
+						  <input type="text" class="form-control" id="lastName" placeholder="Jon" value=<%=request.user.lastName%>>
+						</div>
+					  </div>
+			<div class="form-group">
+						<label for="bio" class="col-sm-2 control-label">Bio</label>
+						<div class="col-sm-10">
+						  <textarea class="form-control" rows="3" id="description"><%=request.user.description%>
+						  </textarea>
+					</div>
+			</section>
+			
+			<section id="activity" class="hidden">
+				<p>Woops! No activity here, go start some!</p>
+			</section>
+			
+			<section id="friends" class="hidden">
+				<p>Friends list:</p>
+				
+				<p> Make some friends! </p>
+			</section>
+			
+			<section id="settings" class="hidden">
+				<p>Edit your user settings:</p>
+				
+				<div class="form-group">
+    				<label for="price" class="col-sm-2 control-label">Price</label>
+      				<input type="number" class="form-control" id="price" value=<%=request.user.email%>>
+				
+				<p class="setting"><span>Language <img src="images/edit.png" alt="*Edit*"></span> English(US)</p>
+				
+				<p class="setting"><span>Profile Status <img src="images/edit.png" alt="*Edit*"></span> Public</p>
+
+			</section>
+		</div><!-- @end #content -->
+	</div><!-- @end #w -->
+<script type="text/javascript">
+$(function(){
+	$('#profiletabs ul li a').on('click', function(e){
+		e.preventDefault();
+		var newcontent = $(this).attr('href');
+		
+		$('#profiletabs ul li a').removeClass('sel');
+		$(this).addClass('sel');
+		
+		$('#content section').each(function(){
+			if(!$(this).hasClass('hidden')) { $(this).addClass('hidden'); }
+		});
+		
+		$(newcontent).removeClass('hidden');
+	});
+});
+</script>

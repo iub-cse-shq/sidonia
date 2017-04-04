@@ -3,7 +3,7 @@ var Forum = require('./../models/Forum.js');
 var errorHandler = require('./errors.server.controller');
 var _ = require('lodash');
 
-module.exports.list = function(req, res) {
+/*module.exports.list = function(req, res) {
 	Forum.find(function(err, data) {
 		if (err) {
 			return res.status(400).send({
@@ -17,6 +17,7 @@ module.exports.list = function(req, res) {
 		}
 	});
 };
+*/
 
 exports.new = function(req, res) {
 	res.render('./../public/views/forum/new.ejs', {
@@ -34,6 +35,13 @@ exports.edit = function(req, res) {
 
 exports.view = function(req, res) {
 	res.render('./../public/views/forum/forums.ejs', {
+		user: req.user || null,
+		request: req
+	});
+};
+
+exports.viewt = function(req, res) {
+	res.render('./../public/views/forum/viewtopic.ejs', {
 		user: req.user || null,
 		request: req
 	});

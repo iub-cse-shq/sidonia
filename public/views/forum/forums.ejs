@@ -16,7 +16,7 @@
 						
 					</td>
 					<td>
-						<h3>Views</h3>
+						<h3>User ID</h3>
 						
 					</td>
 					<td>
@@ -25,7 +25,7 @@
 				</tr>
   				<% for(var i = 0; i < forums.length; i++) { %>
   				<tr>
-					<td> <a href="forum/<%= forums[i]._id %>"> <%= forums[i].title %>  </a> </td>
+					<td> <a href="forum/<%= forums[i]._id %>/topics"> <%= forums[i].title %>  </a> </td>
 					<td> <%= forums[i].description %> </td>
 					<td> <%= forums[i].user %> </td>
 					<td> </td>
@@ -34,9 +34,7 @@
 
 				<tr>
 					<td>
-					<% if (request.user) { %> 
 						<a href="/forums/new"><h3> Create new Forum </h3> </a> 
-					<% } %>
 					</td>
 					
 				</tr>

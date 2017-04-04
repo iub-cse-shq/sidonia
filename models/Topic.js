@@ -14,16 +14,13 @@ var TopicSchema = {
     default: '',
     trim: true,
     required: 'Description required'
-
   },
 
   forum: {
-    type: String,
-    default: '',
-    trim: true,
-    required: 'Forum required'
-
+    type: Schema.ObjectId,
+    ref: 'Forum'
   },
+
   user: {
     type: Schema.ObjectId,
     ref: 'User'

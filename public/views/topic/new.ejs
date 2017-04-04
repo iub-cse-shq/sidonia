@@ -1,30 +1,47 @@
+<% include ../common/checkAuth.ejs %>
 <% include ../common/header.ejs %>
-		<div class = "wrapper">
-			<form id="topicForum" name="">
-				<div class=" topic-box" >
-					<div>
-						<h1> Create New Topic </h1>
-						<br>
-						<label for="topic">Topic</label>
-						<input type="text"  id="topic" placeholder="Ex. Ideas of Cat Names">
-						<label for="detail:">Detail</label>
-						<input type="Detail"  id="detail:" placeholder="detail">
-						<label for="detail:">Forum</label>
-						<div class="dropdown">
-							<button onclick="return myFunction();" class="dropbtn">Select</button>
-							<div id="myDropdown" class = "dropdown-content">
-								<a href="#item1" class="dropdownItem" id = "1">Forum 1</a>
-								<a href="#item2" class="dropdownItem" id = "2">Forum 2</a>
-								<a href="#item3" class="dropdownItem" id = "3">Forum 3</a>
-							</div>
-							<p id="displaySelectedText">Selected Forum</p>
-							<br>
-							<div class = "btn-group">
-								<button type="submit" name ="submit" class="sub-btn">Submit</button>
-								<button type="reset" name = "reset" class="sub-btn">Reset</button>
-							</div>
-						</div>
-					</div>
+
+<div class = "wrapper">
+	<form id="topicForum" name="">
+		<div class=" topic-box" >
+			<div>
+				<h1> Create New Topic </h1>
+				<br>
+				<label for="topic">Topic</label>
+				<input type="text"  id="title" placeholder="Ex. Ideas of Cat Names">
+				<label for="description:">Description</label>
+				<textarea id="description" placeholder="Description"></textarea>
+				<div class = "btn-group">
+					<button type="submit" id = "submit" name ="submit" class="sub-btn">Submit</button>
+					<button type="reset" id = "reset" name = "reset" class="sub-btn">Reset</button>
 				</div>
-			</form>
+			</div>
+		</div>
+	</form>
+	<script>
+		var topic = {};
+		$("#title").change(function(event){
+			topic.title = $("#title").val();
+		});
+		$("#description").change(function(event){
+			topic.description = $("#description").val();
+		});
+		//topic.forum = forum._id;
+		$("#submit").click(function(event){
+			event.preventDefault();
+			$.ajax({
+				method: 'POST',
+				url: "/topic/create",
+				data: topic
+				}).done(function(response){
+					//window.location.replace('/forums/'+response._id);
+					alert("Success");
+				}).fail(function(response){
+					alert(response.responseText);
+					$("#error").text(JSON.parse(response.responseText).message);
+				//	alert(JSON.parse(response.responseText).message);
+			});
+		});
+	</script>
+
 <% include ../common/footer.ejs %>
