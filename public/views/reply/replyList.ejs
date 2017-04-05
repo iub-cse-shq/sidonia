@@ -1,0 +1,211 @@
+<% include ../common/header.ejs %>
+	<div class="wrapper">
+		<h1><%= request.topic.title %></h1>
+		<br>
+		<div class="topic-box">
+			<ol class="messageList xbMessageDefault" id="messageList">
+				<li id="post-4173032" class="message   threadStarter  " data-author="catwings">
+					<div class="messageHeading">
+						<span class="leftSide">
+							<a href="#" title="Permalink" class="datePermalink">
+								<span class="DateTime" title="Jan 4, 2017 at 9:10 PM"><%=request.topic.created %></span>
+							</a>
+						</span>
+						<span class="rightSide">
+							<a href="index.php?threads/cat-doesnt-have-good-balance.332220/#post-4173032" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/4173032/permalink">#1</a>
+						</span>
+					</div>
+					<div class="xbMessageHelper">
+						<div class="messageUserInfo">
+							<div class="messageUserBlock  xbOnlineRegular">
+								<div class="avatarHolder">
+									<span class="helper"><span></span></span>
+									<a href="#" class="avatar Av111447m" data-avatarhtml="true"><img src="/public/images/avatar.png" width="96" height="96" alt="catwings">
+									</a>
+
+									<!-- slot: message_user_info_avatar -->
+								</div>
+								<h3 class="userText">
+								<a href="#" class="username" dir="auto" itemprop="name"><%=request.topic.user._id %></a>
+								<em class="userTitle" itemprop="title">Member</em>
+								
+								<!-- slot: message_user_info_text -->
+							</h3>
+								<div class="extraUserInfo xbBoxedFA">
+									<div class="xbMainUserInfo">
+
+
+										<dl class="pairsJustified xbMessages">
+											<dt><i class="fa fa-comments fa-fw Tooltip" data-offsetx="-6" data-offsety="0"></i></dt>
+											<dd><a href="index.php?search/member&amp;user_id=111447" class="concealed" rel="nofollow">5</a>
+											</dd>
+										</dl>
+										<dl class="pairsJustified xbLikes">
+											<dt><i class="fa fa-thumbs-up fa-fw Tooltip" data-offsetx="-6" data-offsety="0"></i></dt>
+											<dd>1</dd>
+										</dl>
+
+									</div>
+									<dl class="pairsJustified xbJoinDate">
+										<dt><i class="fa fa-calendar fa-fw Tooltip" data-offsetx="-6" data-offsety="0"></i></dt>
+										<dd>Sep 27, 2016 </dd>
+									</dl>
+								</div>
+								<span class="arrow"><span></span></span>
+							</div>
+						</div>
+						<div class="messageInfo primaryContent">
+
+							<div class="messageContent">
+								<article>
+								
+									<%=request.topic.description %>
+							
+								</article>
+							</div>
+							<div class="messageMeta ToggleTriggerAnchor">
+								<div class="privateControls">
+									<div class="privateControlsDefault">
+									</div>
+									<div class="privateControlsMenu">
+									</div>
+								</div>
+								<div class="publicControls">
+								</div>
+							</div>
+							<div id="likes-post-4173032"></div>
+						</div>
+					</div>
+				</li>
+
+				<% for(var i = 0; i < replies.length; i++) { %>
+				<li id="post-4173055" class="message     " data-author="hbunny">
+
+					<div class="messageHeading">
+						<span class="leftSide">
+							<a href="index.php?threads/cat-doesnt-have-good-balance.332220/#post-4173055" title="Permalink" class="datePermalink">
+								<span class="DateTime" title="Jan 4, 2017 at 9:48 PM"><%=replies[i].created %></span>
+							</a>
+						</span>
+						<span class="rightSide">
+							<a href="index.php?threads/cat-doesnt-have-good-balance.332220/#post-4173055" title="Permalink" class="item muted postNumber hashPermalink OverlayTrigger" data-href="index.php?posts/4173055/permalink">#<%=(i+2) %></a>
+						</span>
+					</div>
+					<div class="xbMessageHelper">
+						<div class="messageUserInfo" itemscope="itemscope" itemtype="http://data-vocabulary.org/Person">
+							<div class="messageUserBlock  xbOnlineRegular">
+								<div class="avatarHolder">
+									<span class="helper"><span></span></span>
+									<a href="index.php?members/hbunny.100441/" class="avatar Av100441m" data-avatarhtml="true"><img src="/public/images/avatar.png" width="96" height="96" alt="hbunny">
+									</a>
+									<!-- slot: message_user_info_avatar -->
+								</div>
+								<h3 class="userText">
+								<a href="index.php?members/hbunny.100441/" class="username" dir="auto" itemprop="name"><%=replies[i].user %></a>
+								<em class="userTitle" itemprop="title">Member</em>
+								
+								<!-- slot: message_user_info_text -->
+							</h3>
+								<div class="extraUserInfo xbBoxedFA">
+
+									<div class="xbMainUserInfo">
+
+
+										<dl class="pairsJustified xbMessages">
+											<dt><i class="fa fa-comments fa-fw Tooltip" data-offsetx="-6" data-offsety="0"></i></dt>
+											<dd><a href="index.php?search/member&amp;user_id=100441" class="concealed" rel="nofollow">918</a>
+											</dd>
+										</dl>
+										<dl class="pairsJustified xbLikes">
+											<dt><i class="fa fa-thumbs-up fa-fw Tooltip" data-offsetx="-6" data-offsety="0"></i></dt>
+											<dd>165</dd>
+										</dl>
+									</div>
+
+									<dl class="pairsJustified xbJoinDate">
+										<dt><i class="fa fa-calendar fa-fw Tooltip" data-offsetx="-6" data-offsety="0"></i></dt>
+										<dd>Feb 10, 2016</dd>
+									</dl>
+								</div>
+								<span class="arrow"><span></span></span>
+							</div>
+						</div>
+						<div class="messageInfo primaryContent">
+
+							<div class="messageContent">
+								<article>
+									<%=replies[i].message %>
+								</article>
+							</div>
+
+							<div class="messageMeta ToggleTriggerAnchor">
+								<div class="privateControls">
+									<div class="privateControlsDefault">
+									</div>
+									<div class="privateControlsMenu">
+
+									</div>
+
+								</div>
+
+								<div class="publicControls">
+								</div>
+							</div>
+
+							<div id="likes-post-4173055"></div>
+						</div>
+					</div>
+				</li>
+				<% } %>
+
+			</ol>
+			<BR>
+			<table class="table">
+				<tr>
+					<form name="formReply">
+						<td>
+							<table>
+								<tr>
+									<td><strong><label for="message">Reply</label></strong>
+										<textarea id="message" name="message" cols="45" rows="3" value=""></textarea>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<input type="submit" name="submit" class="sub-btn" id="submit" value="Submit">
+										<input type="reset" name="reset" value="Reset" class="sub-btn">
+									</td>
+								</tr>
+							</table>
+						</td>
+					</form>
+				</tr>
+			</table>
+		</div>
+		<script>
+			$(document).ready(function() {
+				var reply = {};
+				reply.topic = <%- JSON.stringify(topic) %> ;
+				$("#message").change(function(event) {
+					reply.message = $("#message").val();
+				});
+
+				$("#submit").click(function(event) {
+					event.preventDefault();
+					$.ajax({
+						method: 'POST',
+						url: "/topic/<%= topic %>/create",
+						data: reply
+					}).done(function(response) {
+						window.location.reload();
+						
+					}).fail(function(response) {
+						alert(response.responseText);
+						$("#error").text(JSON.parse(response.responseText).message);
+						//	alert(JSON.parse(response.responseText).message);
+					});
+				});
+			});
+		</script>
+
+<% include ../common/footer.ejs %>

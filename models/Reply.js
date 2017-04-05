@@ -15,6 +15,12 @@ var ReplySchema = {
     ref: 'User'
   },
 
+  topic: {
+    type: Schema.ObjectId,
+    ref: 'Topic',
+    required: 'Topic Id is required'
+  },
+
   created: {
     type: Date,
     default: Date.now

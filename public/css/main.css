@@ -249,6 +249,9 @@ input {
     padding-top: 10px;
     padding-bottom: 30px;
     border-top: 1px solid rgb(235, 235, 235);
+    list-style-type: none;
+    display: block;
+    overflow: hidden;
 }
 .messageUserInfo {
     float: left;

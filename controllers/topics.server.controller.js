@@ -28,7 +28,7 @@ exports.new = function(req, res) {
 
 
 module.exports.topicList = function (req, res){
-	Topic.find({'forum': req.body.forumID}, function(err, data){
+	Topic.find({'forum': req.forum}, function(err, data){
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
@@ -94,7 +94,7 @@ module.exports.update = function(req, res) {
 };
 
 exports.topicByID = function(req, res, next, id) {
-	topic.findById(id).populate('user', 'email').exec(function(err, topic) {
+	Topic.findById(id).populate('user', 'email').exec(function(err, topic) {
 		if (err) return next(err);
 		if (!topic) return next(new Error('Failed to load topic ' + id));
 		req.topic = topic;

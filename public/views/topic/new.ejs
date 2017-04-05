@@ -19,28 +19,29 @@
 		</div>
 	</form>
 	<script>
-		var topic = {};
-		topic.forum = <%- JSON.stringify(forum) %>;
-		$("#title").change(function(event){
-			topic.title = $("#title").val();
-		});
-		$("#description").change(function(event){
-			topic.description = $("#description").val();
-		});
-		//topic.forum = forum._id;
-		$("#submit").click(function(event){
-			event.preventDefault();
-			$.ajax({
-				method: 'POST',
-				url: "/topic/<%= forum %>/create",
-				data: topic
-				}).done(function(response){
-					//window.location.replace('/forums/'+response._id);
-					alert("Success");
-				}).fail(function(response){
-					alert(response.responseText);
-					$("#error").text(JSON.parse(response.responseText).message);
-				//	alert(JSON.parse(response.responseText).message);
+		$(document).ready(function() {
+			var topic = {};
+			topic.forum = <%- JSON.stringify(forum) %>;
+			$("#title").change(function(event){
+				topic.title = $("#title").val();
+			});
+			$("#description").change(function(event){
+				topic.description = $("#description").val();
+			});
+			
+			$("#submit").click(function(event){
+				event.preventDefault();
+				$.ajax({
+					method: 'POST',
+					url: "/topic/<%= forum %>/create",
+					data: topic
+					}).done(function(response){
+						window.location.replace('/topic/'+response._id+'/replies');
+					}).fail(function(response){
+						alert(response.responseText);
+						$("#error").text(JSON.parse(response.responseText).message);
+					//	alert(JSON.parse(response.responseText).message);
+				});
 			});
 		});
 	</script>
