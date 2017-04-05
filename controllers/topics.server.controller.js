@@ -18,7 +18,7 @@ module.exports.list = function(req, res) {
 	});
 };
 
-exports.new = function(req, res) {
+module.exports.new = function(req, res) {
 	res.render('./../public/views/topic/new.ejs', {
 		user: req.user || null,
 		forum: req.params.forumId || null,
@@ -93,7 +93,7 @@ module.exports.update = function(req, res) {
 		});
 };
 
-exports.topicByID = function(req, res, next, id) {
+module.exports.topicByID = function(req, res, next, id) {
 	Topic.findById(id).populate('user', 'email').exec(function(err, topic) {
 		if (err) return next(err);
 		if (!topic) return next(new Error('Failed to load topic ' + id));

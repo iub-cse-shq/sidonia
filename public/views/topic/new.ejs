@@ -33,7 +33,7 @@
 				event.preventDefault();
 				$.ajax({
 					method: 'POST',
-					url: "/topic/<%= forum %>/create",
+					url: "/forum/<%= forum %>/topic/create",
 					data: topic
 					}).done(function(response){
 						window.location.replace('/topic/'+response._id+'/replies');
