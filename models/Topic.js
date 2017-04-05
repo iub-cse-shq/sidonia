@@ -18,7 +18,8 @@ var TopicSchema = {
 
   forum: {
     type: Schema.ObjectId,
-    ref: 'Forum'
+    ref: 'Forum',
+    required: 'Forum Id is required'
   },
 
   user: {

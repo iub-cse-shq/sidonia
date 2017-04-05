@@ -19,7 +19,7 @@ app.route('/forum/:forumId/topic/edit/:topicId')
 	.get(topics.read)
 	.put(users.requiresLogin, topics.update);
 
-app.route('/topic/create').post(topics.create);
+app.route('/topic/:forumId/create').post(topics.create);
 
 app.param('forumId', forums.forumByID);
 

@@ -21,7 +21,7 @@ module.exports.list = function(req, res) {
 exports.new = function(req, res) {
 	res.render('./../public/views/topic/new.ejs', {
 		user: req.user || null,
-		forum: req.forum || null,
+		forum: req.params.forumId || null,
 		request: req
 	});
 };
@@ -36,7 +36,7 @@ module.exports.topicList = function (req, res){
 		} else {
 				res.render('./../public/views/topic/topicList.ejs', {
 				user: req.user || null,
-				forum: req.forum || null,
+				forum: req.params.forumId || null,
 				request: req,
 				topics: data
 			});
@@ -47,7 +47,8 @@ module.exports.topicList = function (req, res){
 
 module.exports.create = function(req, res) {
 	var topic = new Topic(req.body);
-	topic.forum = req.forum;
+	topic.forum = mongoose.Types.ObjectId(topic.forum);
+	console.log(req.body);
 	topic.user = req.user;
 	topic.save(function(err, data) {
 		if (err) {

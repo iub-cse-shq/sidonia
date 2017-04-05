@@ -20,6 +20,7 @@
 	</form>
 	<script>
 		var topic = {};
+		topic.forum = <%- JSON.stringify(forum) %>;
 		$("#title").change(function(event){
 			topic.title = $("#title").val();
 		});
@@ -31,7 +32,7 @@
 			event.preventDefault();
 			$.ajax({
 				method: 'POST',
-				url: "/topic/create",
+				url: "/topic/<%= forum %>/create",
 				data: topic
 				}).done(function(response){
 					//window.location.replace('/forums/'+response._id);

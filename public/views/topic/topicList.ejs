@@ -26,6 +26,7 @@
   				<% for(var i = 0; i < topics.length; i++) { %>
   				<tr>
 					<td> <a href="forum/<%= forum._id %>/topic/<%= topics[i]._id %>"> <%= topics[i].title %>  </a> </td>
+					<td> <%= forum %> </td>
 					<td> <%= topics[i].description %> </td>
 					<td> <%= topics[i].created %> </td>
 					<td> 0</td>
@@ -34,7 +35,7 @@
 
 				<tr>
 					<td>
-						<a href="/forum/<%= forum._id %>/topic/new"><h3> Create new Topic </h3> </a> 
+						<a href="/forum/<%= forum %>/topic/new"><h3> Create new Topic </h3> </a> 
 					</td>
 					
 				</tr>
