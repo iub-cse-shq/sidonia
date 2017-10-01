@@ -1,14 +1,13 @@
 @font-face {
-	font-family: 'BebasNeue';
-	src: url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot');
-	src: url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.eot?#iefix')
-	format('embedded-opentype'),
-	url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff2')
-	format('woff2'),url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.woff')
-	format('woff'),url('../bebas/MyFontsWebfontsKit/webfonts/32FE1E_0_0.ttf')
-	format('truetype');
-	src: url('../bebas/MyFontsWebfontsKit/webfonts/BebasNeueLight.otf') format("opentype");
-	src: url('../bebas/MyFontsWebfontsKit/webfonts/BebasNeueBook.otf') format("opentype");
+    font-family: 'BebasNeue';
+    src: url('fonts/bebas.eot');
+    src: url('fonts/bebas.eot?#iefix') format('embedded-opentype'),
+         url('fonts/bebas.woff') format('woff'),
+         url('fonts/bebas.ttf') format('truetype'),
+         url('fonts/bebas.svg#') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 .nav-bar {
 	background-color: #252525;
